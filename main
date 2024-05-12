@@ -3,14 +3,16 @@ while wait(1) do
    for _,child in ipairs(childDI) do
       local high = Instance.new("Highlight")
       high.Parent = child
+		high.OutlineTransparency = .25
+		high.FillTransparency = 0
       if child.Name == "Lucky Potion" then
-      high.FillColor = (0,255,0)
+      high.FillColor = Color3.fromRGB(0,255,0)
       elseif child.Name == "Speed Potion" then
-      high.FillColor = (0,0,255)
+      high.FillColor = Color3.fromRGB(0,0,255)
       elseif child.Name == "Coin" then
-      high.FillColor = (0,255,255)
+      high.FillColor = Color3.fromRGB(0,255,255)
    else
-       high.FillColor = (255,255,255)
+       high.FillColor = Color3.fromRGB(255,255,255)
       end
    end
 end
