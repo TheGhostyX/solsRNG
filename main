@@ -1,3 +1,4 @@
+print("doppelganger")
 while wait(1) do
    local childDI = workspace.DroppedItems:GetChildren()
    for _,child in ipairs(childDI) do
@@ -20,5 +21,3 @@ while wait(1) do
       end
    end
 end
-
-print("Doppelganger")
