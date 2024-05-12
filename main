@@ -1,0 +1,18 @@
+while wait(1) do
+   local childDI = workspace.DroppedItems:GetChildren()
+   for _,child in ipairs(childDI) do
+      local high = Instance.new("Highlight")
+      high.Parent = child
+      if child.Name == "Lucky Potion" then
+      high.FillColor = (0,255,0)
+      elseif child.Name == "Speed Potion" then
+      high.FillColor = (0,0,255)
+      elseif child.Name == "Coin" then
+      high.FillColor = (0,255,255)
+   else
+       high.FillColor = (255,255,255)
+      end
+   end
+end
+
+print("Doppelganger")
