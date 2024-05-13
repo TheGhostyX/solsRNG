@@ -1,0 +1,32 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Sol's RNG by Ghoste", "Synapse")
+Section:NewToggle("Highlight Items", "Highlights items when they spawn", function(state)
+    if state then
+      wait(0.5)
+      local childDI = workspace.DroppedItems:GetChildren()
+      for _,child in ipairs(childDI) do
+      local high = Instance.new("Highlight")
+      high.Parent = child
+      high.OutlineTransparency = .25
+		  high.FillTransparency = 0
+      if child.Name == "Lucky Potion" then
+      high.FillColor = Color3.fromRGB(0,255,0)
+      high.OutlineColor = Color3.fromRGB(0,255,0)
+      elseif child.Name == "Speed Potion" then
+      high.FillColor = Color3.fromRGB(0,0,255)
+      high.OutlineColor = Color3.fromRGB(0,0,255)
+      elseif child.Name == "Coin" then
+      high.FillColor = Color3.fromRGB(255,255,0)
+      high.OutlineColor = Color3.fromRGB(255,255,0)
+      elseif child.Name == "Piece of Star" then
+      high.FillColor = Color3.fromRGB(125,0,0)
+      high.OutlineColor = Color3.fromRGB(125,0,0)
+    else
+      high.FillColor = Color3.fromRGB(255,255,255)
+      high.OutlineColor = Color3.fromRGB(255,255,255)
+      end
+    end
+    else
+        print("Toggle Off")
+    end
+end)
