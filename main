@@ -1,4 +1,4 @@
-print("doppelganger")
+print("Executed SRNG by Ghoste")
 while wait(1) do
    local childDI = workspace.DroppedItems:GetChildren()
    for _,child in ipairs(childDI) do
