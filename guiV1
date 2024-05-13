@@ -2,6 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Sol's RNG by Ghoste", "Synapse")
 local Section = Tab:NewSection("Visuals")
 local Tab = Window:NewTab("What")
+Section:NewLabel("Visual thing")
 
 Section:NewToggle("Highlight Items", "Highlights items when they spawn", function(state)
     if state then
@@ -33,3 +34,5 @@ Section:NewToggle("Highlight Items", "Highlights items when they spawn", functio
         print("Toggle Off")
     end
 end)
+
+Section:UpdateSection("Highlight Items")
