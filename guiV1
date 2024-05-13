@@ -3,6 +3,6 @@ NewScreen.Name = "SolsGuiV1"
 NewScreen.Parent = game.Players.LocalPlayer.PlayerGui
 local NewFrame = Instance.new("Frame")
 NewFrame.Parent = NewScreen
-NewFrame.BackgroundColor = Color3.fromRGB(0,0,0)
+NewFrame.BackgroundColor3 = Color3.fromRGB(0,0,0)
 NewFrame.Active = true
 NewFrame.Draggable = true
