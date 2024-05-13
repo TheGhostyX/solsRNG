@@ -17,6 +17,7 @@ while wait(1) do
       high.OutlineColor = Color3.fromRGB(255,255,0)
 elseif child.Name == "Piece of Star" then
 high.FillColor = Color3.fromRGB(125,0,0)
+high.OutlineColor = Color3.fromRGB(125,0,0)
    else
        high.FillColor = Color3.fromRGB(255,255,255)
       high.OutlineColor = Color3.fromRGB(255,255,255)
