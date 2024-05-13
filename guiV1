@@ -3,6 +3,21 @@ local Window = Library.CreateLib("Sol's RNG by Ghoste", "Synapse")
 local Tab = Window:NewTab("What")
 local Section = Tab:NewSection("Visuals")
 Section:NewLabel("Visual thing")
+Section:UpdateSection("Visual thing")
+
+getgenv().Toggled = false
+
+local toggle = Section:NewToggle("Toggle", "Info", (state)
+    getgenv().Toggled = state
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	if getgenv().Toggled then
+		toggle:UpdateToggle("Toggle On")
+	else
+		toggle:UpdateToggle("Toggle Off")
+	end
+end)
 
 Section:NewToggle("Highlight Items", "Highlights items when they spawn", function(state)
     if state then
@@ -34,5 +49,3 @@ Section:NewToggle("Highlight Items", "Highlights items when they spawn", functio
         print("Toggle Off")
     end
 end)
-
-Section:UpdateSection("Highlight Items")
