@@ -1,5 +1,6 @@
 print("Executed SRNG by Ghoste")
-while wait(1) do
+
+while wait(0.5) do
    local childDI = workspace.DroppedItems:GetChildren()
    for _,child in ipairs(childDI) do
       local high = Instance.new("Highlight")
