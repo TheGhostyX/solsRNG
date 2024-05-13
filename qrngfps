@@ -1,0 +1,7 @@
+local Light = game:GetService("Lighting")
+if game:IsLoaded() then
+  Light:FindFirstChild("Bloom").Enabled = false
+  Light:FindFirstChild("SunRays").Enabled = false
+  Light:FindFirstChild("DepthOfField").Enabled = false
+end
+print("Boosted fps.")
