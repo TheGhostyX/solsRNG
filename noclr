@@ -1,10 +1,10 @@
 while wait(0.5) do
-local childdi = workspace.DroppedItems:GetChildren()
-for i,child in ipairs(chilldi) do
-local high = Instance.new("Highlight")
-high.Parent = child
-high.OutlineTransparency = 1
-high.FillTransparency = 0
-high.FillColor = Color3.fromRGB(255,255,255)
-end
+  local childdi = workspace.DroppedItems:GetChildren()
+  for _, child in ipairs(childdi) do
+    local high = Instance.new("Highlight")
+    high.Parent = child
+    high.OutlineTransparency = 1
+    high.FillTransparency = 0
+    high.FillColor = Color3.fromRGB(255,255,255)
+  end
 end
