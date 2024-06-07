@@ -7,7 +7,9 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 while wait(0.5) do
    local childDI = workspace.DroppedItems:GetChildren()
    for _,child in ipairs(childDI) do
+       if child.Highlight then return end
       local high = Instance.new("Highlight")
+      high.Name = "Highlight"
       high.Parent = child
 		high.OutlineTransparency = 1
 		high.FillTransparency = 0
