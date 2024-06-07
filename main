@@ -9,20 +9,16 @@ while wait(0.5) do
    for _,child in ipairs(childDI) do
       local high = Instance.new("Highlight")
       high.Parent = child
-		high.OutlineTransparency = .25
+		high.OutlineTransparency = 1
 		high.FillTransparency = 0
       if child.Name == "Lucky Potion" then
       high.FillColor = Color3.fromRGB(125,255,125)
-      high.OutlineColor = Color3.fromRGB(125,255,125)
       elseif child.Name == "Speed Potion" then
       high.FillColor = Color3.fromRGB(125,125,255)
-      high.OutlineColor = Color3.fromRGB(125,125,255)
       elseif child.Name == "Coin" then
       high.FillColor = Color3.fromRGB(255,255,125)
-      high.OutlineColor = Color3.fromRGB(255,255,125)
       elseif child.Name == "Eternal Flame" then
       high.FillColor = Color3.fromRGB(255,125,125)
-      high.OutlineColor = Color3.fromRGB(255,125,125)
       game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "Biome Item";
                 Text ="Eternal Flame has spawned.";
@@ -30,7 +26,6 @@ while wait(0.5) do
             })
       elseif child.Name == "Curruptaine" then
       high.FillColor = Color3.fromRGB(255,125,255)
-      high.OutlineColor = Color3.fromRGB(255,125,255)
       game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "Biome Item";
                 Text ="Curruptaine has spawned.";
@@ -38,7 +33,6 @@ while wait(0.5) do
             })
       elseif child.Name == "Piece of Star" then
       high.FillColor = Color3.fromRGB(200,125,200)
-      high.OutlineColor = Color3.fromRGB(200,125,200)
       game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "Biome Item";
                 Text ="Piece of Star has spawned.";
@@ -46,7 +40,6 @@ while wait(0.5) do
             })
       elseif child.Name == "NULL?" then
       high.FillColor = Color3.fromRGB(125,125,125)
-      high.OutlineColor = Color3.fromRGB(125,125,125)
       game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "Biome Item";
                 Text ="NULL? has spawned.";
@@ -54,7 +47,6 @@ while wait(0.5) do
             })
    else
        high.FillColor = Color3.fromRGB(255,255,255)
-      high.OutlineColor = Color3.fromRGB(255,255,255)
       end
    end
 end
