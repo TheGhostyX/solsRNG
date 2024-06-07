@@ -1,4 +1,8 @@
-print("Executed SRNG by Ghoste")
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Sol`s RNG by Ghostah";
+                Text ="Executed";
+                Duration = 2.5;
+            })
 
 while wait(0.5) do
    local childDI = workspace.DroppedItems:GetChildren()
@@ -19,15 +23,35 @@ while wait(0.5) do
       elseif child.Name == "Eternal Flame" then
       high.FillColor = Color3.fromRGB(255,0,0)
       high.OutlineColor = Color3.fromRGB(255,0,0)
+      game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Biome Item";
+                Text ="Eternal Flame has spawned.";
+                Duration = 2.5;
+            })
       elseif child.Name == "Curruptaine" then
       high.FillColor = Color3.fromRGB(255,0,255)
       high.OutlineColor = Color3.fromRGB(255,0,255)
+      game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Biome Item";
+                Text ="Curruptaine has spawned.";
+                Duration = 2.5;
+            })
       elseif child.Name == "Piece of Star" then
       high.FillColor = Color3.fromRGB(125,0,0)
       high.OutlineColor = Color3.fromRGB(125,0,0)
+      game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Biome Item";
+                Text ="Piece of Star has spawned.";
+                Duration = 2.5;
+            })
       elseif child.Name == "NULL?" then
       high.FillColor = Color3.fromRGB(125,125,125)
       high.OutlineColor = Color3.fromRGB(125,125,125)
+      game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Biome Item";
+                Text ="NULL? has spawned.";
+                Duration = 2.5;
+            })
    else
        high.FillColor = Color3.fromRGB(255,255,255)
       high.OutlineColor = Color3.fromRGB(255,255,255)
