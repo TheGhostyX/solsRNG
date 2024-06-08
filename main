@@ -4,6 +4,9 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
                 Duration = 2.5;
             })
 
+--Biome detection notify
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/main/biome-detect"))()
+
 while wait(0.5) do
    local childDI = workspace.DroppedItems:GetChildren()
    for _,child in ipairs(childDI) do
@@ -21,32 +24,12 @@ while wait(0.5) do
       high.FillColor = Color3.fromRGB(255,255,125)
       elseif child.Name == "Eternal Flame" then
       high.FillColor = Color3.fromRGB(255,125,125)
-      game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "Biome Item";
-                Text ="Eternal Flame has spawned.";
-                Duration = 2.5;
-            })
       elseif child.Name == "Curruptaine" then
       high.FillColor = Color3.fromRGB(255,125,255)
-      game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "Biome Item";
-                Text ="Curruptaine has spawned.";
-                Duration = 2.5;
-            })
       elseif child.Name == "Piece of Star" then
       high.FillColor = Color3.fromRGB(200,125,200)
-      game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "Biome Item";
-                Text ="Piece of Star has spawned.";
-                Duration = 2.5;
-            })
       elseif child.Name == "NULL?" then
       high.FillColor = Color3.fromRGB(125,125,125)
-      game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "Biome Item";
-                Text ="NULL? has spawned.";
-                Duration = 2.5;
-            })
    else
        high.FillColor = Color3.fromRGB(255,255,255)
       end
