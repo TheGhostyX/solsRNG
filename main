@@ -7,7 +7,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 --Biome detection notify
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/main/biome-detect"))()
 
-while wait(0.5) do
+while wait(1) do
    local childDI = workspace.DroppedItems:GetChildren()
    for _,child in ipairs(childDI) do
        if child.Highlight then return end
