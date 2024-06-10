@@ -1,6 +1,6 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{
                 Title = "Sol`s RNG by Ghostah";
-                Text ="Executed";
+                Text = game.Players.LocalPlayer.Name;
                 Duration = 2.5;
             })
 
