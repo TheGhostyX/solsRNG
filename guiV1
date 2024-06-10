@@ -1,2 +1,5 @@
 local thingy = Instance.new("BillboardGui")
 thingy.AlwaysOnTop = true
+local texty = Instance.new("TextLabel", thingy)
+texty.BackgroundTransparency = 1
+texty.TextScaled = true
