@@ -1,19 +1,22 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "executed Sol`s RNG by Ghostah";
-                Text = game.Players.LocalPlayer.DisplayName;
-                Duration = 1.25;
-            })
+   Title = "Sol's RNG";
+   Text = game.Players.LocalPlayer.DisplayName;
+   Duration = 1.25;
+})
 
 --Biome detection notify
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/lib/biome-detect"))()
 
 while wait(1) do
    for _,child in ipairs(workspace.DroppedItems:GetChildren()) do
-      if child.Highlight or child.billboard then return end
+      if child.Highlight or child.billboard then
+         child.Highlight:Destroy()
+         child.billboard:Destroy()
+      end
       --item
       local thingy = Instance.new("BillboardGui")
-       thingy.Parent = child
-       thingy.Active = true
+      thingy.Parent = child
+      thingy.Active = true
       thingy.AlwaysOnTop = true
       thingy.Name = "billboard"
       thingy.Size = UDim2.fromScale(4,5)
@@ -46,7 +49,7 @@ while wait(1) do
       elseif child.Name == "NULL?" then
       high.FillColor = Color3.fromRGB(125,125,125)
    else
-       high.FillColor = Color3.fromRGB(255,255,255)
+      high.FillColor = Color3.fromRGB(255,255,255)
       end
    end
 end

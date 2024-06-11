@@ -6,30 +6,30 @@ local Weather = MI.CurrentTime.Weather
 Weather.Changed:Connect(function()
     if Weather.Text == "[ Corruption ]" then
         game:GetService("StarterGui"):SetCore("SendNotification",{
-               Title = "Corruption just spawned";
-               Text ="Rare Biome has just spawned";
-               Duration = 5;
+               Title = "Rare biome just spawned";
+               Text = Weather.Text;
+               Duration = 1;
             })
     end
     if Weather.Text == "[ Hell ]" then
         game:GetService("StarterGui"):SetCore("SendNotification",{
-               Title = "Hell just spawned";
-               Text ="Rare Biome has just spawned";
-               Duration = 5;
+               Title = "Rare biome just spawned";
+               Text = Weather.Text;
+               Duration = 1;
             })
     end
     if Weather.Text == "[ Null ]" then
         game:GetService("StarterGui"):SetCore("SendNotification",{
-               Title = "Null just spawned";
-               Text ="Rare Biome has just spawned";
-               Duration = 5;
+               Title = "Rare biome just spawned";
+               Text = Weather.Text;
+               Duration = 1;
             })
     end
     if Weather.Text == "[ Starfall ]" then
         game:GetService("StarterGui"):SetCore("SendNotification",{
-               Title = "Starfall just spawned";
-               Text ="Rare Biome has just spawned";
-               Duration = 5;
+               Title = "Rare biome just spawned";
+               Text = Weather.Text;
+               Duration = 1;
             })
     end
 end)
