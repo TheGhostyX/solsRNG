@@ -24,8 +24,10 @@ while wait(1) do
       texty.Active = true
       texty.Name = "Texty"
       texty.BackgroundTransparency = .3
+      texty.BackgroundColor3 = Color3.fromRGB(0,0,0)
       texty.TextScaled = true
       texty.Text = child.Name
+      texty.TextColor3 = Color3.fromRGB(255,255,255)
       local corner = Instance.new("UICorner", texty)
       --highlight
       local high = Instance.new("Highlight")
