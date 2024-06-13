@@ -38,6 +38,8 @@ DroppedItems.ChildAdded:Connect(function(child)
         high.FillColor = Color3.fromRGB(125,125,255)
       elseif child.Name == "Coin" then
         high.FillColor = Color3.fromRGB(255,255,125)
+      elseif child.Name == "Gilded Coin" then
+         high.FillColor = Color3.fromRGB(255,255,125)
       elseif child.Name == "Eternal Flame" then
         high.FillColor = Color3.fromRGB(255,125,125)
       elseif child.Name == "Curruptaine" then
