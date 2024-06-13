@@ -2,7 +2,6 @@ local plr = game.Players.LocalPlayer
 local MI = plr.PlayerGui.MainInterface
 local Weather = MI.CurrentTime.Weather
 
-
 Weather.Changed:Connect(function()
     if Weather.Text == "[ Corruption ]" then
         game:GetService("StarterGui"):SetCore("SendNotification",{
