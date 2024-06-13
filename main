@@ -5,12 +5,13 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 
 --Biome detection notify
---loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/lib/biome-detect"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/lib/biome-detect"))()
 
-while wait(1) do
-   for _,child in ipairs(workspace.DroppedItems:GetChildren()) do
-      --item
-      local thingy = Instance.new("BillboardGui", child)
+local DroppedItems = workspace.DroppedItems
+DroppedItems.ChildAdded:Connect(function(child)
+    --item
+      local thingy = Instance.new("BillboardGui")
+      thingy.Parent = child
       thingy.Active = true
       thingy.AlwaysOnTop = true
       thingy.Name = "BillboardGui"
@@ -45,8 +46,7 @@ while wait(1) do
         high.FillColor = Color3.fromRGB(200,125,200)
       elseif child.Name == "NULL?" then
         high.FillColor = Color3.fromRGB(125,125,125)
-   else
+     else
         high.FillColor = Color3.fromRGB(255,255,255)
       end
-   end
-end
+end)
