@@ -9,15 +9,11 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 
 while wait(1) do
    for _,child in ipairs(workspace.DroppedItems:GetChildren()) do
-      if child.Highlight or child.billboard then
-         child.Highlight:Destroy()
-         child.billboard:Destroy()
-      end
       --item
       local thingy = Instance.new("BillboardGui", child)
       thingy.Active = true
       thingy.AlwaysOnTop = true
-      thingy.Name = "billboard"
+      thingy.Name = "BillboardGui"
       thingy.Size = UDim2.fromScale(4,5)
       local texty = Instance.new("TextLabel", thingy)
       texty.Size = UDim2.fromScale(1,.2)
@@ -36,21 +32,21 @@ while wait(1) do
       high.OutlineTransparency = 1
       high.FillTransparency = 0
       if child.Name == "Lucky Potion" then
-         high.FillColor = Color3.fromRGB(125,255,125)
+        high.FillColor = Color3.fromRGB(125,255,125)
       elseif child.Name == "Speed Potion" then
-         high.FillColor = Color3.fromRGB(125,125,255)
+        high.FillColor = Color3.fromRGB(125,125,255)
       elseif child.Name == "Coin" then
-         high.FillColor = Color3.fromRGB(255,255,125)
+        high.FillColor = Color3.fromRGB(255,255,125)
       elseif child.Name == "Eternal Flame" then
-         high.FillColor = Color3.fromRGB(255,125,125)
+        high.FillColor = Color3.fromRGB(255,125,125)
       elseif child.Name == "Curruptaine" then
-         high.FillColor = Color3.fromRGB(255,125,255)
+        high.FillColor = Color3.fromRGB(255,125,255)
       elseif child.Name == "Piece of Star" then
-         high.FillColor = Color3.fromRGB(200,125,200)
+        high.FillColor = Color3.fromRGB(200,125,200)
       elseif child.Name == "NULL?" then
-         high.FillColor = Color3.fromRGB(125,125,125)
+        high.FillColor = Color3.fromRGB(125,125,125)
    else
-         high.FillColor = Color3.fromRGB(255,255,255)
+        high.FillColor = Color3.fromRGB(255,255,255)
       end
    end
 end
