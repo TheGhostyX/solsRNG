@@ -5,7 +5,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 
 --Biome detection notify
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/lib/biome-detect"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/lib/biome-detect"))()
 
 local DroppedItems = workspace.DroppedItems
 DroppedItems.ChildAdded:Connect(function(child)
