@@ -24,34 +24,30 @@
     end)
 
     local button = Instance.new("TextButton")
-    button.Name = "ESP"
+    button.Name = "biome"
     button.Size = UDim2.new(0.5, 0, 0.0280000009, 0)
     button.Position = UDim2.new(0.25, 0, 0.4, 0)
-    button.Text = "Click for ESP"
+    button.Text = "Rare biome notifier"
     button.Parent = frame
 
     local button2 = Instance.new("TextButton")
-    button2.Name = "noESP"
+    button2.Name = "highlight"
     button2.Size = UDim2.new(0.5, 0, 0.0280000009, 0)
     button2.Position = UDim2.new(0.25, 0, 0.4, 0)
-    button2.Text = "Click for no ESP"
+    button2.Text = "Click to enable item highlights"
     button2.Parent = frame
 
     button.MouseButton1Click:Connect(function()
-    local players = game.Players:GetChildren()
-    
-    for i,v in ipairs(players) do
-        local character = v.Character
-        local highlight = Instance.new("Highlight", character)
-        highlight.FillColor = Color3.new(1,1,1)
-    end
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/main/lib/biome-detect"))()
     end)
 
+    local state1 = false
     button2.MouseButton1Click:Connect(function()
-    local players = game.Players:GetChildren()
-    
-    for i,v in ipairs(players) do
-        local character = v.Character
-        character.Highlight:Destroy()
-    end
+        if state1 == false then
+            state1 == true
+            print("Enabled")
+        else
+            state1 == false
+            print("Disabled")
+        end
     end)
