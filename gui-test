@@ -11,6 +11,20 @@
     frame.BorderColor3 = Color3.fromRGB(1,1,1)
     frame.Parent = gui
 
+    local visiblers = Instance.new("TextButton")
+    visiblers.Text = "X"
+    visiblers.Size = UDim2.new(0.2, 0, 0.2, 0)
+    visiblers.Position = UDim2.new(0.02, 0, 0.02, 0)
+    visiblers.AnchorPoint = Vector2.new(0, 0)
+    visiblers.BackgroundColor3 = Color3.fromRGB(0,0,0)
+    visiblers.BackgroundTransparency = 0.3
+    visiblers.TextColor3 = Color3.fromRGB(255, 255, 255)
+    visiblers.TextScaled = true
+
+    visiblers.MouseButton1Click:Connect(function()
+        frame.Visible = not frame.Visible
+    end)
+
     local function scaleFrameToScreenSize()
         local screenSize = game.Players.LocalPlayer:WaitForChild("PlayerGui").AbsoluteSize
         local minDimension = math.min(screenSize.X, screenSize.Y)
