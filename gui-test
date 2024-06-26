@@ -47,6 +47,13 @@
     button2.Position = UDim2.new(0.25, 0, 0.4, 0)
     button2.Text = "Click to enable item highlights"
     button2.Parent = frame
+    
+    local blackmarket = Instance.new("TextButton")
+    blackmarket.Name = "blackmarket"
+    blackmarket.Size = UDim2.new(0.5, 0, 0.0280000009, 0)
+    blackmarket.Position = UDim2.new(0.25, 0, 0.4, 0)
+    blackmarket.Text = "Click to open|close black market GUI"
+    blackmarket.Parent = frame
 
     button.MouseButton1Click:Connect(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/main/lib/biome-detect"))()
@@ -104,4 +111,9 @@
             state1 == false
             print("Disabled")
         end
+    end)
+
+    blackmarket.MouseButton1Click:Connect(function()
+        local frame = game.Players.LocalPlayer.PlayerGui.MainInterface.Blackmarket
+        frame.Visible = not frame.Visible
     end)
