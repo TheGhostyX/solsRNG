@@ -131,3 +131,14 @@
         local frame = game.Players.LocalPlayer.PlayerGui.MainInterface.Blackmarket
         frame.Visible = not frame.Visible
     end)
+
+    local jake = Instance.new("TextButton")
+    jake.Name = "jakey"
+    jake.Size = UDim2.new(0.5, 0, 0.0280000009, 0)
+    jake.Position = UDim2.new(0.25, 0, 0.4, 0)
+    jake.Text = "coming soon"
+    jake.Parent = frame
+
+    jake.MouseButton1Click:Connect(function()
+      print("mate ur cooked")
+    end)
