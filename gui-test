@@ -76,6 +76,7 @@
     local state1 = false
     button2.MouseButton1Click:Connect(function()
         if state1 == false then
+            button2.Text = "Click to disable Item highlights"
             state1 == true
             workspace.DroppedItems.ChildAdded:Connect(function()
                 --item
@@ -122,6 +123,7 @@
       end
             end)
         else
+            button2.Text = "Click to enable Item highlights"
             state1 == false
             print("Disabled")
         end
