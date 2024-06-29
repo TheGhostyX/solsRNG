@@ -149,5 +149,7 @@
     jake.Parent = frame
 
     jake.MouseButton1Click:Connect(function()
-      print("mate ur cooked")
+      jake.Text = "COMIN SOON!!1"
+      wait(1)
+      jake.Text = "coming soon"
     end)
