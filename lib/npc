@@ -1,0 +1,7 @@
+workspace.ChildAdded:Connect(function(child)
+    if child.Name == "Mari" or child.Name == "Jester" then
+        local highlight = Instance.new("Highlight", child)
+        highlight.FillColor = Color3.new(0,255,0)
+        highlight.FillTransparency = 0.43
+    end
+end)

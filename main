@@ -6,6 +6,8 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 
 --Biome detection notify
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/main/lib/biome-detect"))()
+--npc higlight
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGhostyX/solsRNG/main/lib/npc"))()
 
 local DroppedItems = workspace.DroppedItems
 DroppedItems.ChildAdded:Connect(function(child)

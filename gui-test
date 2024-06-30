@@ -12,9 +12,9 @@
     frame.Parent = gui
     frame.ZIndex = 9
 
-    frame.Visible = false
+    frame.Visible = true
 
-    local visiblers = Instance.new("TextButton", gui)
+    --[[local visiblers = Instance.new("TextButton", gui)
     visiblers.Text = "X"
     visiblers.Size = UDim2.new(0.2, 0, 0.2, 0)
     visiblers.Position = UDim2.new(0.02, 0, 0.02, 0)
@@ -25,7 +25,7 @@
 
     visiblers.MouseButton1Click:Connect(function()
         frame.Visible = not frame.Visible
-    end)
+    end)--]]
 
     local function scaleFrameToScreenSize()
         local screenSize = game.Players.LocalPlayer:WaitForChild("PlayerGui").AbsoluteSize
