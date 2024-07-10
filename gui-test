@@ -145,6 +145,7 @@
     npcs.MouseButton1Click:Connect(function()
       if npcState == false then
         npcState = true
+        npcs.Text = "Click to disable npc highlights"
         while npcState == true do
           workspace.ChildAdded:Connect(function(child)
             if child.Name == "Mari" or child.Name == "Jester" then
@@ -156,4 +157,5 @@
         end
       else
         npcState = false
+        npcs.Text = "Click to enable npc highlights"
     end)
