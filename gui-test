@@ -133,3 +133,27 @@
       wait(1)
       jake.Text = "coming soon"
     end)
+
+    local npcs = Instance.new("TextButton")
+    npcs.Name = "highlight"
+    npcs.Size = UDim2.new(0.5, 0, 0.0280000009, 0)
+    npcs.Position = UDim2.new(0.25, 0, 0.4, 0)
+    npcs.Text = "Click to enable npc highlights"
+    npcs.Parent = frame
+
+    local npcState = false
+    npcs.MouseButton1Click:Connect(function()
+      if npcState == false then
+        npcState = true
+        while npcState == true do
+          workspace.ChildAdded:Connect(function(child)
+            if child.Name == "Mari" or child.Name == "Jester" then
+                local highlight = Instance.new("Highlight", child)
+                highlight.FillColor = Color3.new(0,255,0)
+                highlight.FillTransparency = 0.43
+            end
+          end)
+        end
+      else
+        npcState = false
+    end)
